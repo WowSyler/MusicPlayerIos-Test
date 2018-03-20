@@ -23,9 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-x3-n7D">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-x3-n7D">
                                 <rect key="frame" x="83" y="33" width="209" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -53,25 +53,31 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ResetPasswordB:" destination="ux5-mO-Te6" eventType="touchUpInside" id="7h3-JY-5z7"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oD-be-WM9">
                                 <rect key="frame" x="32" y="257" width="310" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" textContentType="email"/>
                                 <connections>
-                                    <outlet property="delegate" destination="fmK-b5-dX2" id="l7a-37-jkA"/>
+                                    <outlet property="delegate" destination="ux5-mO-Te6" id="zx2-fo-Gnz"/>
                                 </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3it-2D-JSX"/>
                     </view>
+                    <connections>
+                        <outlet property="UserEmailLa" destination="0oD-be-WM9" id="0gP-hv-rep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Twx-sX-sAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2664.8000000000002" y="-1597.1514242878561"/>
+            <point key="canvasLocation" x="2422" y="-1597"/>
         </scene>
         <!--Singin View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -87,7 +93,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sing In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atM-Pp-ivW">
                                         <rect key="frame" x="112" y="44" width="150" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -106,9 +112,9 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" textContentType="email"/>
                                         <connections>
-                                            <outlet property="delegate" destination="fmK-b5-dX2" id="6dL-y7-KOk"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="46I-rZ-Kxx"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRu-Ht-6C6">
@@ -125,6 +131,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="SinginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijA-k4-Mii"/>
+                                        </connections>
                                     </button>
                                     <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3M-iE-JgC">
                                         <rect key="frame" x="32" y="440" width="310" height="58"/>
@@ -141,7 +150,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="ux5-mO-Te6" kind="show" id="A9P-rh-wU5"/>
+                                            <segue destination="vla-SP-EVc" kind="show" id="94J-m8-6gU"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YlX-SE-AWP">
@@ -151,7 +160,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="fmK-b5-dX2" id="CU0-4d-LNE"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="t4B-50-P39"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -164,8 +173,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="uyq-cA-2ec"/>
                     <connections>
-                        <outlet property="UserNameL" destination="g9g-Pb-GDL" id="s2N-NI-Lxj"/>
+                        <outlet property="UserEmailLabel" destination="g9g-Pb-GDL" id="eyS-tz-plD"/>
                         <outlet property="UserPasswordLabel" destination="YlX-SE-AWP" id="gmR-cQ-z0K"/>
+                        <segue destination="vla-SP-EVc" kind="show" identifier="ToHomeFromSingin" id="TbH-Ml-Zbh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,13 +191,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whC-Dy-CN4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Undergraund Music" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="42" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIO-rl-F8b">
-                                        <rect key="frame" x="57" y="44" width="261" height="62"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Undergraund Music" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="46" minimumFontSize="15" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIO-rl-F8b">
+                                        <rect key="frame" x="57" y="29" width="261" height="85"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -230,11 +240,20 @@
                                     <segue destination="fmK-b5-dX2" kind="show" id="nEX-dh-xVP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOP-Wv-Nsm">
+                                <rect key="frame" x="67" y="163" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cs4-9L-hhX"/>
                     </view>
                     <navigationItem key="navigationItem" id="KVJ-cY-a6H" colorLabel="IBBuiltInLabel-Red"/>
+                    <connections>
+                        <outlet property="imag" destination="eOP-Wv-Nsm" id="iQU-rG-8lv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUx-x9-7ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,7 +269,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sing Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-sn-A4i">
                                 <rect key="frame" x="112" y="44" width="150" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -265,17 +284,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-kl-cux">
-                                <rect key="frame" x="32" y="223" width="310" height="40"/>
+                                <rect key="frame" x="32" y="234" width="310" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" textContentType="email"/>
                                 <connections>
                                     <outlet property="delegate" destination="fmK-b5-dX2" id="dZy-Q1-uWD"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnH-mA-ZCc">
-                                <rect key="frame" x="32" y="270" width="310" height="40"/>
+                                <rect key="frame" x="32" y="289" width="310" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -285,7 +304,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Again Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wL-AT-gMt">
-                                <rect key="frame" x="32" y="318" width="310" height="40"/>
+                                <rect key="frame" x="32" y="344" width="310" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -295,7 +314,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzO-1G-7xe">
-                                <rect key="frame" x="32" y="373" width="310" height="58"/>
+                                <rect key="frame" x="32" y="413" width="310" height="58"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.38526014580000001" blue="0.25590056500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
@@ -308,35 +327,37 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bos-ZD-tWw">
-                                <rect key="frame" x="32" y="176" width="310" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="fmK-b5-dX2" id="dPG-tf-cJL"/>
+                                    <action selector="SingUpButton:" destination="fmK-b5-dX2" eventType="touchUpInside" id="T9S-9I-E88"/>
                                 </connections>
-                            </textField>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pKs-9D-XoC"/>
                     </view>
                     <connections>
                         <outlet property="UserEmailLabel" destination="c0B-kl-cux" id="F98-1n-bAJ"/>
-                        <outlet property="UserNameL" destination="bos-ZD-tWw" id="Vfg-Ov-eBZ"/>
                         <outlet property="UserPassword2Label" destination="3wL-AT-gMt" id="i5R-Tp-h4h"/>
                         <outlet property="UserPasswordLabel" destination="BnH-mA-ZCc" id="iWD-vg-ift"/>
+                        <segue destination="vla-SP-EVc" kind="show" identifier="ToHomaFromSingup" id="XEU-Qa-ww9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzA-qi-6T4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="636" y="-783.95802098950526"/>
         </scene>
+        <!--HomeScreenID-->
+        <scene sceneID="JmY-T0-cSy">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HomeScreenID" storyboardName="HomeScreen" referencedIdentifier="HomeScreenID" id="vla-SP-EVc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5M-nS-5v1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685" y="-765"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="TbH-Ml-Zbh"/>
         <segue reference="M93-m5-N18"/>
-        <segue reference="XRf-Gb-K2w"/>
+        <segue reference="U5v-3a-evJ"/>
     </inferredMetricsTieBreakers>
 </document>
