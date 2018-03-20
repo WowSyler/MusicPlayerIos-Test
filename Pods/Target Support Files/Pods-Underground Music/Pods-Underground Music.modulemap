@@ -1,0 +1,6 @@
+framework module Pods_Underground_Music {
+  umbrella header "Pods-Underground Music-umbrella.h"
+
+  export *
+  module * { export * }
+}
