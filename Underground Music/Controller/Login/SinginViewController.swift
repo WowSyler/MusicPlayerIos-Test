@@ -48,7 +48,15 @@ class SinginViewController: UIViewController, UITextFieldDelegate {
                     self.present(alert, animated: true, completion: nil)
                     
                 } else {
-                  self.performSegue(withIdentifier: "ToHomeFromSingin", sender: nil)
+                  
+                    UserDefaults.standard.set(user!.email, forKey: "user")
+                    UserDefaults.standard.synchronize()
+                    
+                    let delegete : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    delegete.userRememberLogin()
+                    
+                    
+                    //self.performSegue(withIdentifier: "ToHomeFromSingin", sender: nil)
                 }
             })
             

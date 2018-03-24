@@ -60,8 +60,16 @@ class SingupViewController: UIViewController, UITextFieldDelegate {
                         self.present(alert, animated: true, completion: nil)
                         
                     }else {
+                        //kullanici hatirlama
+                        UserDefaults.standard.set(user!.email, forKey: "user")
+                        UserDefaults.standard.synchronize()
+                        
+                        let delegete : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                        delegete.userRememberLogin()
+                        
+                        
                         //Ana ekrana yonlendiriyoruz ba;arili olursa
-                        self.performSegue(withIdentifier: "ToHomaFromSingup", sender: nil)
+                        //self.performSegue(withIdentifier: "ToHomaFromSingup", sender: nil)
                     }
                 })
             

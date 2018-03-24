@@ -16,10 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+//kulanici hatirama fonksiyo
+    func userRememberLogin(){
+        let user : String? = UserDefaults.standard.string(forKey: "user")
+        if user != nil {
+            let board : UIStoryboard = UIStoryboard(name: "HomeScreen", bundle: nil)
+            let tabbar = board.instantiateViewController(withIdentifier: "HomeScreenID") as! UITabBarController
+            window?.rootViewController = tabbar
+        }
+    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        userRememberLogin()
         FirebaseApp.configure()
         return true
     }

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +16,16 @@
                     <view key="view" contentMode="scaleToFill" id="S8F-JI-H0g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ov5-Hv-irJ">
+                                <rect key="frame" x="148" y="546" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="XtK-Cr-dkf" kind="show" id="2HF-Wg-Jsc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OWt-cs-RIR"/>
                     </view>
@@ -97,7 +106,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fN5-Sy-nIa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zh8-NX-2ew"/>
+                    <navigationItem key="navigationItem" id="zh8-NX-2ew">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="gUd-LN-deV">
+                            <connections>
+                                <action selector="LogoutButton:" destination="XtK-Cr-dkf" id="5fo-fn-l4d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSx-Hi-bw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,4 +137,7 @@
             <point key="canvasLocation" x="-1076" y="-958"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tsT-6x-eti"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class ProfilDetailViewController: UIViewController {
 
@@ -21,7 +23,16 @@ class ProfilDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func LogoutButton(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "user")
+        UserDefaults.standard.synchronize()
+        let board : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let singin = board.instantiateViewController(withIdentifier: "SinginScreen") as! SinginViewController
+        let deletege : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        deletege.window?.rootViewController = singin
+        deletege.userRememberLogin()
+    }
+    
     /*
     // MARK: - Navigation
 
