@@ -18,7 +18,7 @@
         <!--Reset Password View Controller-->
         <scene sceneID="RH2-i3-B7n">
             <objects>
-                <viewController id="ux5-mO-Te6" customClass="ResetPasswordViewController" customModule="Underground_Music" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ressettopass" id="ux5-mO-Te6" customClass="ResetPasswordViewController" customModule="Underground_Music" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fgv-nU-dd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="U5v-3a-evJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="3T4-HS-4gz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si7-PB-rVI">
@@ -44,7 +44,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.38526014580000001" blue="0.25590056500000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="19"/>
-                                <state key="normal" title="Sing In">
+                                <state key="normal" title="Send Mail">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -69,7 +69,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3it-2D-JSX"/>
+                        <viewLayoutGuide key="safeArea" id="q7Y-gS-gbb"/>
                     </view>
                     <connections>
                         <outlet property="UserEmailLa" destination="0oD-be-WM9" id="0gP-hv-rep"/>
@@ -104,7 +104,7 @@
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
-                                            <segue destination="sB5-5h-PIQ" kind="show" id="M93-m5-N18"/>
+                                            <segue destination="sB5-5h-PIQ" kind="show" identifier="backLoginSelectedFromLogin" id="M93-m5-N18"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-Pb-GDL">
@@ -165,11 +165,10 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <viewLayoutGuide key="safeArea" id="O8h-SA-qWl"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="2mY-V8-dhN"/>
                     </view>
                     <navigationItem key="navigationItem" id="uyq-cA-2ec"/>
                     <connections>
@@ -182,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="1684" y="-1597"/>
         </scene>
-        <!--Launch View Controller-->
+        <!--Karsilama-->
         <scene sceneID="y0r-X3-Zla">
             <objects>
-                <viewController id="sB5-5h-PIQ" customClass="LaunchViewController" customModule="Underground_Music" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectedToEndet" title="Karsilama" id="sB5-5h-PIQ" customClass="LaunchViewController" customModule="Underground_Music" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydO-hu-fhc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +247,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="cs4-9L-hhX"/>
+                        <viewLayoutGuide key="safeArea" id="7lx-jz-bfY"/>
                     </view>
                     <navigationItem key="navigationItem" id="KVJ-cY-a6H" colorLabel="IBBuiltInLabel-Red"/>
                     <connections>
@@ -262,7 +261,7 @@
         <!--Singup View Controller-->
         <scene sceneID="ml7-9D-4mx">
             <objects>
-                <viewController id="fmK-b5-dX2" customClass="SingupViewController" customModule="Underground_Music" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="singupTouser" id="fmK-b5-dX2" customClass="SingupViewController" customModule="Underground_Music" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s6m-Br-FFm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,7 +332,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="pKs-9D-XoC"/>
+                        <viewLayoutGuide key="safeArea" id="4Io-kf-aag"/>
                     </view>
                     <connections>
                         <outlet property="UserEmailLabel" destination="c0B-kl-cux" id="F98-1n-bAJ"/>
@@ -356,8 +355,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TbH-Ml-Zbh"/>
+        <segue reference="94J-m8-6gU"/>
         <segue reference="M93-m5-N18"/>
-        <segue reference="U5v-3a-evJ"/>
+        <segue reference="3T4-HS-4gz"/>
     </inferredMetricsTieBreakers>
 </document>
