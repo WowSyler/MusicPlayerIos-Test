@@ -9,7 +9,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'SwiftyGif'
-
+pod 'SDWebImage'
 
   # Pods for Underground Music
 

@@ -7,20 +7,83 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import SDWebImage
 
-class SingerSongsViewController: UIViewController {
-
+class SingerSongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+    
+    
+    @IBOutlet weak var tableview: UITableView!
+    var songname = [String]()
+    var songurl = [String]()
+    var albumimage = [String]()
+    var songuid = [String]()
+    var singername = [String]()
+    var chosensing = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.songurl.removeAll()
+        self.songuid.removeAll()
+        self.albumimage.removeAll()
+        self.songname.removeAll()
+        self.singername.removeAll()
+        print(chosensing)
+        getDataFromServer()
+        self.navigationItem.title = chosensing
 
         // Do any additional setup after loading the view.
     }
-
+    func getDataFromServer(){
+        Database.database().reference().child("MusicA").observe(DataEventType.childAdded) { (snapshot) in
+            
+            let values = snapshot.value! as! NSDictionary
+            let albums = values["album"] as! NSDictionary
+            let albumsid = albums.allKeys
+           
+            for album in albumsid {
+               
+                let singalbum = albums[album] as! NSDictionary
+                
+                if self.chosensing == singalbum["singername"] as! String {
+                    
+                self.songname.append(singalbum["songname"] as! String)
+                self.songurl.append(singalbum["songurl"] as! String)
+                self.songuid.append(singalbum["uid"] as! String)
+                self.albumimage.append(singalbum["albumimage"] as! String)
+                }
+            }
+            self.tableview.reloadData()
+            
+            
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return songname.count
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! singerSongTableViewCell
+        
+        cell.albumimage.sd_setImage(with: URL(string: self.albumimage[indexPath.row]))
+        cell.songname.text = songname[indexPath.row]
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "listTomusic2", sender: nil)
+    }
+    //func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) 
+    //}
 
     /*
     // MARK: - Navigation

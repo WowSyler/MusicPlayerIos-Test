@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Twx-sX-sAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2422" y="-1597"/>
+            <point key="canvasLocation" x="2666" y="-1597"/>
         </scene>
         <!--Singin View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -150,7 +150,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="vla-SP-EVc" kind="show" id="94J-m8-6gU"/>
+                                            <segue destination="ux5-mO-Te6" kind="show" id="RsY-p2-1R1"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YlX-SE-AWP">
@@ -355,7 +355,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="94J-m8-6gU"/>
+        <segue reference="TbH-Ml-Zbh"/>
         <segue reference="M93-m5-N18"/>
         <segue reference="3T4-HS-4gz"/>
     </inferredMetricsTieBreakers>

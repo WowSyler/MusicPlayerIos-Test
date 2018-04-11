@@ -7,20 +7,51 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
+import SDWebImage
 
-class MyMusicListViewController: UIViewController {
+class MyMusicListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableview: UITableView!
+    var listArray = [String]()
+    var selected = " "
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableview.delegate = self
+        tableview.dataSource = self
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+ 
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listArray.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = listArray[indexPath.row]
+        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "listeyap" {
+            let dest = segue.destination as! CreateNewListViewController
+            dest.chosenlist = selected
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selected = listArray[indexPath.row]
+        performSegue(withIdentifier: "listeyap", sender: nil)
+    }
+    
+    @IBAction func addlistek(_ sender: Any) {
+        selected = ""
+        performSegue(withIdentifier: "listeyap", sender: nil)
+    }
+
 
     /*
     // MARK: - Navigation

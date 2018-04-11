@@ -7,15 +7,37 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import SDWebImage
+import Firebase
 
-class ProfilAndListViewController: UIViewController {
 
+class ProfilAndListViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var emailuser: UILabel!
+    
+    var useremail = ""
+    
+    
+    
+    //text alani disinda klayve kapatma
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    //======
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        getDataFromServer()
         // Do any additional setup after loading the view.
     }
+    func getDataFromServer(){
+        let useremail = Auth.auth().currentUser?.email
+        emailuser.text = useremail
+        print(useremail!)
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

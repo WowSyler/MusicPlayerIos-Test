@@ -49,6 +49,9 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
   - SwiftyGif (4.1.0)
 
 DEPENDENCIES:
@@ -56,6 +59,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - SDWebImage
   - SwiftyGif
 
 SPEC CHECKSUMS:
@@ -70,8 +74,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
 
-PODFILE CHECKSUM: 537ec5d4f1a05b20144595bc24f72d176b483cc1
+PODFILE CHECKSUM: 811b1d98a4065eb0a3bff0d7dd8ee299185b01b9
 
 COCOAPODS: 1.4.0

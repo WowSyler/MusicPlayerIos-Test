@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>songurl</key>
+		<string>gs://undergraund-music-firebase.appspot.com/MusicLib/Kevin Alark/Beat Nice/14. Nevro - Madness - Hiphoplife.com.tr.mp3</string>
+		<key>artistName</key>
+		<string>Kevin Alark</string>
+		<key>albumName</key>
+		<string>Beat Nice</string>
+		<key>songName</key>
+		<string>Oxxe</string>
+		<key>albumArtwork</key>
+		<string>b.jpg</string>
+	</dict>
+	<dict>
+		<key>songurl</key>
+		<string>gs://undergraund-music-firebase.appspot.com/MusicLib/Kevin Alark/Beat Nice/15. Oxxe - So High - Hiphoplife.com.tr.mp3</string>
+		<key>artistName</key>
+		<string>Kevin Alark</string>
+		<key>albumName</key>
+		<string>Beat Nice</string>
+		<key>songName</key>
+		<string>Nev Life</string>
+		<key>albumArtwork</key>
+		<string>b.jpg</string>
+	</dict>
+	<dict>
+		<key>songurl</key>
+		<string>gs://undergraund-music-firebase.appspot.com/MusicLib/Kevin Alark/Beat Nice/15. Oxxe - So High - Hiphoplife.com.tr.mp3</string>
+		<key>artistName</key>
+		<string>Nopolon Yang</string>
+		<key>albumName</key>
+		<string>Hello</string>
+		<key>songName</key>
+		<string>One Day</string>
+		<key>albumArtwork</key>
+		<string>w.jpg</string>
+	</dict>
+	<dict>
+		<key>songurl</key>
+		<string>gs://undergraund-music-firebase.appspot.com/MusicLib/Yeis Sensura/Sonic/12. Matiz - Sperm Bank - Hiphoplife.com.tr.mp3</string>
+		<key>artistName</key>
+		<string>Yeis Sensura</string>
+		<key>albumName</key>
+		<string>To Love</string>
+		<key>songName</key>
+		<string>I Dont Know</string>
+		<key>albumArtwork</key>
+		<string>e.jpg</string>
+	</dict>
+	<dict>
+		<key>songurl</key>
+		<string>gs://undergraund-music-firebase.appspot.com/MusicLib/Yeis Sensura/Sonic/10. Kalibre44 - March To Mars - Hiphoplife.com.tr.mp3</string>
+		<key>artistName</key>
+		<string>Yeis Sensura</string>
+		<key>albumName</key>
+		<string>To Love</string>
+		<key>songName</key>
+		<string>Feodal</string>
+		<key>albumArtwork</key>
+		<string>e.jpg</string>
+	</dict>
+</array>
+</plist>
