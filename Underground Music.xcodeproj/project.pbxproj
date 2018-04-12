@@ -35,7 +35,6 @@
 		9846203520605238003CD632 /* AlbumSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846203420605238003CD632 /* AlbumSongsViewController.swift */; };
 		9846203720605251003CD632 /* SingerSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846203620605251003CD632 /* SingerSongsViewController.swift */; };
 		98462039206057F0003CD632 /* ProfilAndListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98462038206057F0003CD632 /* ProfilAndListViewController.swift */; };
-		9846203B20605817003CD632 /* ProfilDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846203A20605817003CD632 /* ProfilDetailViewController.swift */; };
 		9846203D20605854003CD632 /* MyMusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846203C20605854003CD632 /* MyMusicListViewController.swift */; };
 		9846203F20605899003CD632 /* CreateNewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846203E20605899003CD632 /* CreateNewListViewController.swift */; };
 		98462041206058B8003CD632 /* LookMyMusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98462040206058B8003CD632 /* LookMyMusicListViewController.swift */; };
@@ -112,7 +111,6 @@
 		9846203420605238003CD632 /* AlbumSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSongsViewController.swift; sourceTree = "<group>"; };
 		9846203620605251003CD632 /* SingerSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerSongsViewController.swift; sourceTree = "<group>"; };
 		98462038206057F0003CD632 /* ProfilAndListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilAndListViewController.swift; sourceTree = "<group>"; };
-		9846203A20605817003CD632 /* ProfilDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilDetailViewController.swift; sourceTree = "<group>"; };
 		9846203C20605854003CD632 /* MyMusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMusicListViewController.swift; sourceTree = "<group>"; };
 		9846203E20605899003CD632 /* CreateNewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewListViewController.swift; sourceTree = "<group>"; };
 		98462040206058B8003CD632 /* LookMyMusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookMyMusicListViewController.swift; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				98462038206057F0003CD632 /* ProfilAndListViewController.swift */,
-				9846203A20605817003CD632 /* ProfilDetailViewController.swift */,
 				9846203C20605854003CD632 /* MyMusicListViewController.swift */,
 				9846203E20605899003CD632 /* CreateNewListViewController.swift */,
 				98462040206058B8003CD632 /* LookMyMusicListViewController.swift */,
@@ -748,7 +745,6 @@
 				9846201F205FE5C7003CD632 /* SingupViewController.swift in Sources */,
 				9846203520605238003CD632 /* AlbumSongsViewController.swift in Sources */,
 				9833D8F1206A41A800CF648A /* CollectionViewCell.swift in Sources */,
-				9846203B20605817003CD632 /* ProfilDetailViewController.swift in Sources */,
 				98462039206057F0003CD632 /* ProfilAndListViewController.swift in Sources */,
 				9846201D205FE5B6003CD632 /* SinginViewController.swift in Sources */,
 				9833D8FF206AB4E100CF648A /* singerSongTableViewCell.swift in Sources */,

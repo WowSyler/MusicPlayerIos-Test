@@ -62,16 +62,16 @@
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="8e2-oN-OUq"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="LSG-7f-ljW">
-                        <barButtonItem key="rightBarButtonItem" title="Details" id="h2Q-CB-lKa">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="h2Q-CB-lKa">
                             <connections>
-                                <segue destination="XtK-Cr-dkf" kind="show" id="Gk1-IL-gdo"/>
+                                <action selector="logoutbutton:" destination="mPe-Uu-zhC" id="rWb-gf-SzL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailuser" destination="7bk-hX-iFx" id="aSe-TE-7VD"/>
-                        <segue destination="XtK-Cr-dkf" kind="show" id="tsT-6x-eti"/>
+                        <outlet property="logoutbutton" destination="h2Q-CB-lKa" id="TZI-lR-cds"/>
                         <segue destination="AmJ-6Q-9xq" kind="show" id="h5S-HO-ng8"/>
                     </connections>
                 </viewController>
@@ -246,28 +246,6 @@
             </objects>
             <point key="canvasLocation" x="870" y="-173"/>
         </scene>
-        <!--Profil Detail View Controller-->
-        <scene sceneID="ZH7-05-END">
-            <objects>
-                <viewController id="XtK-Cr-dkf" customClass="ProfilDetailViewController" customModule="Underground_Music" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="T9h-3i-quV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="fN5-Sy-nIa"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zh8-NX-2ew">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="gUd-LN-deV">
-                            <connections>
-                                <action selector="LogoutButton:" destination="XtK-Cr-dkf" id="5fo-fn-l4d"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dSx-Hi-bw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="870" y="-958"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YIe-hn-NOB">
             <objects>
@@ -288,7 +266,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tsT-6x-eti"/>
         <segue reference="h5S-HO-ng8"/>
     </inferredMetricsTieBreakers>
 </document>

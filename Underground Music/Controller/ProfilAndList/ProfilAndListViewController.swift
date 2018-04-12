@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 import SDWebImage
 import Firebase
+import FirebaseAuth
 
 
 class ProfilAndListViewController: UIViewController, UITextFieldDelegate {
@@ -24,7 +25,7 @@ class ProfilAndListViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return true
     }
-    //======
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,26 +33,29 @@ class ProfilAndListViewController: UIViewController, UITextFieldDelegate {
         getDataFromServer()
         // Do any additional setup after loading the view.
     }
+    @IBAction func logoutbutton(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "user")
+        UserDefaults.standard.synchronize()
+        let board : UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let singin = board.instantiateViewController(withIdentifier: "SinginScreen") as! SinginViewController
+        let deletege : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        deletege.window?.rootViewController = singin
+        deletege.userRememberLogin()
+        
+    }
+    
+    
     func getDataFromServer(){
         let useremail = Auth.auth().currentUser?.email
         emailuser.text = useremail
         print(useremail!)
 
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

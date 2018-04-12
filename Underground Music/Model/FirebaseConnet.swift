@@ -61,9 +61,32 @@ class GetFirebaseData {
         //            self.tableview.reloadData()
 
         }
+    
+    ///=====DownloadData ===========    ///=====DownloadData ===========
+    
+    func dwnloadMusic(){
+        for link in songurl {
+            let songdatapath = Storage.storage().reference(forURL: link)
+            // Create local  URL
+            let localURL = URL(string: "path/to/music")!
+            
+            _ = songdatapath.write(toFile: localURL) {
+                url, error in
+                if error != nil {
+                    print("Error downloading:\(String(describing: error))")
+                    return
+                }else if (url?.path) != nil{
+                    print("downloading is finish")
+                    
+                }
+            }
+        }
     }
+    ///=====DownloadData ===========
     
     
+    
+    }
     
     
     

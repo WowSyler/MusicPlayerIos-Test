@@ -179,9 +179,9 @@ class MusicPlayViewController: UIViewController, UITableViewDelegate,UITableView
             }
         }
     }
-    ///=====DownloadData ===========    ///=====DownloadData ===========
+  
 
-    func dwnloadMusic(){
+    func GetMetaDataMusic(){
         for link in songurl {
         let songdatapath = Storage.storage().reference(forURL: link)
             // Create local  URL
@@ -199,7 +199,7 @@ class MusicPlayViewController: UIViewController, UITableViewDelegate,UITableView
             }
         }
     }
-    ///=====DownloadData ===========
+
 
     // MARK: - UITableViewDelegate  table view ac kapa listeden sarki sec vs
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -246,7 +246,7 @@ class MusicPlayViewController: UIViewController, UITableViewDelegate,UITableView
         //    MAIN ===================================================
         //    MAIN ===================================================
         //    MAIN ===================================================
-        dwnloadMusic()
+        GetMetaDataMusic()
         getDataFromServer()
         retrieveSavedTrackNumber()
         prepareAudio()

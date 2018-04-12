@@ -12,8 +12,8 @@ import FirebaseAuth
 
 class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var UserEmailLa: UITextField!
     
+    @IBOutlet weak var userEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,19 +31,25 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UserEmailLa.resignFirstResponder()
+        userEmail.resignFirstResponder()
     }
     // text klavye kapatma
     
     @IBAction func ResetPasswordB(_ sender: Any) {
         
-        /*if UserEmailLa.text != ""{
-            Auth.auth().sendPasswordReset(withEmail: UserEmailLa.text!, completion: { (error) in
+        if userEmail.text != ""{
+            Auth.auth().sendPasswordReset(withEmail: userEmail.text!, completion: { (error) in
                 if error != nil {
                     let alert = UIAlertController(title: "Hata", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
                     let okbutton = UIAlertAction(title: "Tamam", style: UIAlertActionStyle.cancel, handler: nil)
                     alert.addAction(okbutton)
                     self.present(alert, animated: true, completion: nil)
+                }else{
+                
+                let alert = UIAlertController(title: "Gonderildi", message: "Eposta gonderildi..", preferredStyle: UIAlertControllerStyle.alert)
+                let okbutton = UIAlertAction(title: "Tamam", style: UIAlertActionStyle.cancel, handler: nil)
+                alert.addAction(okbutton)
+                self.present(alert, animated: true, completion: nil)
                 }
             })
         }else {
@@ -52,6 +58,6 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(okbutton)
             self.present(alert, animated: true, completion: nil)
         }
- */
+ 
     }
 }
